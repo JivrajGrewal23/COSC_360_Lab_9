@@ -5,6 +5,21 @@
 <script type="text/javascript" src="scripts/validate.js"></script>
 
 <!-- Password checking script here!! -->
+<script>
+function checkPasswordMatch(e){
+  var pwd = document.getElementById('password');
+  var pwdCheck = document.getElementById('password-check');
+  if(pwd.value != pwdCheck.value){
+    makeRed(pwd);
+    makeRed(pwdCheck);
+    alert("passwords do not match plese enter again");
+    e.preventDefault();
+  } else{
+    alert("Passwords match good job");
+    e.submit();
+  }
+}
+</script>
 
 </head>
 
